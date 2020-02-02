@@ -60,3 +60,13 @@ The most frequently used biquad kind is [RBJ](https://webaudio.github.io/Audio-E
 It has a set of formulas for calculating coefficient for various kinds of responses.
 
 We select this filter for our implementation, because it matches near perfectly in the comparisons.
+
+It's available in faust in `maxmsp.lib`.
+Only in late or developer versions, this library was relicensed permissively, so instead it's copied in our source tree with the appropriate license mention. (as `rbj.lib`)
+
+## Implementation
+
+The implementation of the filters is subject to following prerequisites:
+- have controls which map to the documented opcodes
+- have ability to modulate frequency and resonance and fast rate
+- have stability, particularly in presence of important modulation
