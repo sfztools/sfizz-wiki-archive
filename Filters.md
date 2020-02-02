@@ -109,3 +109,14 @@ The following faust options are used which are notable:
 - `-cn`: sets the class name of generated C++
 - `-double`: indicates to perform internal computations in double precision, which is found to be necessary for numeric stability
 - `-inpl`: allow to process the buffers in place; from what I can tell, it doesn't have performance impact.
+
+## Smoothing
+
+When the filter is modulated, we need a form of smoothing to apply, such that a modulation never applies a too brutal change which produces a discontinuity, destabilizing the filter.
+
+The smoothing function is a single-pole lowpass filter. Defined in `sfz_filters.dsp`, it's the function `smoothCoefs`.
+
+Handling this problem, there is one special consideration to consider:
+- if smoothing is applied to parameters Fc and Q, they will be varying at a-rate, and also the filter computation will also become a-rate, regardless that Fc and Q controls are k-rate, killing efficiency.
+- the solution is to apply smoothing to the individual coefficients `bN` and `aN`; since biquads are normalized, hence eliminates coefficient `a0`, there is generally need for 5 smooth filters (`b0`, `b1`, `b2`, `a1`, `a2`).
+In some RBJ filter types, there are some coefficients which are constant or equal to another, in this case faust will be able to eliminate and simplify as needed, so it needs less smooth filters than general case.
