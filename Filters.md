@@ -31,7 +31,7 @@ resonance=10.0
 
 ## The biquad
 
-The filters of 2, 4 or 6 poles kind are provided as biquad filters. A biquad is an IIR filter of the second order.
+The filters of 2, 4 or 6 poles kind are provided as biquad filters. A biquad is an IIR filter of the second order. 4-pole and 6-pole are obtained by cascading.
 
 The transfer function of the generic biquad is:
 
