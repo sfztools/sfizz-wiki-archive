@@ -130,7 +130,7 @@ This is what is special regarding this wrapper:
 - all filter objects are instantiated in this, but only one used based on value of type;
 - when there is a change of type, the memory of the new filter is cleared to zero, to avoid any glitches; theoretically a type change may cause discontinuity, but not in SFZ, since filter type is always fixed.
 - when the filter is not subject to modulations, the function call `process` is optimal.
-- when is is modulated, invoke `processModulated`. In this case, the filter updates will occur at a fixed interval `N` frames, to limit the facility of updates. It's a latency-performance compromise. `N` is defined as `kFilterControlInterval` in the file `SfzFilterDefs.h`.
+- when is is modulated, invoke `processModulated`. In this case, the filter updates will occur at a fixed interval `N` frames, to limit the frequency of updates. It's a latency-performance compromise. `N` is defined as `kFilterControlInterval` in the file `SfzFilterDefs.h`.
 
 ## Relation of controls to SFZ opcodes
 
