@@ -35,7 +35,7 @@ The filters of 2, 4 or 6 poles kind are provided as biquad filters. A biquad is 
 
 The transfer function of the generic biquad is:
 
-`H(z)=(b0 + b1*z^-1 + b2 * z^-2) / (a0 + a1 * z^-1 + a2 * z^-2)`
+`H(z) = (b0 + b1*z^-1 + b2 * z^-2) / (a0 + a1 * z^-1 + a2 * z^-2)`
 
 From this formula, the response is computed by substituting `z` for `exp(2*pi*fc/fs)`.
 The polar form of the result are the filter's amplitude and phase response.
@@ -45,7 +45,7 @@ When H(z) is substituted with `Y(z)/X(z)`, and then this identity applied to pas
 
 It's the implementable Direct Form I equation:
 
-`y[n] = (1/a0) * (b0*x[n] + b1*x[n-1] + b2*x[n-2] - a1*x[n-1] - a2*x[n-2])`
+`y[n] = (1/a0) * (b0*x[n] + b1*x[n-1] + b2*x[n-2] - a1*y[n-1] - a2*y[n-2])`
 
 Then, `a0` is factored into the equation to save an instruction in the computation:
 
