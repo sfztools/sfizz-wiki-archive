@@ -70,3 +70,28 @@ The implementation of the filters is subject to following prerequisites:
 - have controls which map to the documented opcodes
 - have ability to modulate frequency and resonance and fast rate
 - have stability, particularly in presence of important modulation
+
+We have a source `sfz_filters.dsp` written in faust language, an entry point to the filters.
+
+Faust is a specialized programming language which is able to generated optimized DSP code, in some aspects which are not sometimes possible in a non-specialized language.
+
+For instance, Faust is aware of some notions of variability, and adapt code generation and optimization accordingly.
+It can be defined like this:
+- constant: a value which never varies
+- a-rate: a value which updates at the audio rate, once per frame
+- k-rate: a value which updates at the control rate, once per `process` call
+
+When you have a filter which can modulate dynamically its response, there is potentially expensive computation involved.
+For instance, formulas of RBJ biquads involve trigonometry.
+
+To make modulation efficient as much as possible, this computation must be avoided at a-rate, but rather be made at k-rate.
+
+For this reason, we define out filter controls as parameters, as in the sliders of a hypothetical UI, and not signals.
+It's how to implement k-rate update. (even if no UI, faust calls it "sliders")
+```
+cutoff = hslider("[01] Cutoff [unit:Hz] [scale:log]", 440.0, 50.0, 10000.0, 1.0);
+Q = vslider("[02] Resonance [unit:dB]", 0.0, 0.0, 40.0, 0.1) : ba.db2linear;
+```
+
+Our filter corresponding to each type has a naming convention starting with "sfz".
+As an example, the 2-pole lowpass is the function `sfzLpf2p`. It is 1-in, 1-out.
