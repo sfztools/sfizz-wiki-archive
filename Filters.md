@@ -120,3 +120,20 @@ Handling this problem, there is one special consideration to consider:
 - if smoothing is applied to parameters Fc and Q, they will be varying at a-rate, and also the filter computation will also become a-rate, regardless that Fc and Q controls are k-rate, killing efficiency.
 - the solution is to apply smoothing to the individual coefficients `bN` and `aN`; since biquads are normalized, hence eliminates coefficient `a0`, there is generally need for 5 smooth filters (`b0`, `b1`, `b2`, `a1`, `a2`).
 In some RBJ filter types, there are some coefficients which are constant or equal to another, in this case faust will be able to eliminate and simplify as needed, so it needs less smooth filters than general case.
+
+## Filter wrapper
+
+There exists a filter wrapper class written for multi-mode. This is found in `SfzFilters.h`.
+
+This is what is special regarding this wrapper:
+- the type of filter is selected through a choice of enumerated constants;
+- all filter objects are instantiated in this, but only one used based on value of type;
+- when there is a change of type, the memory of the new filter is cleared to zero, to avoid any glitches; theoretically a type change may cause discontinuity, but not in SFZ, since filter type is always fixed.
+- when the filter is not subject to modulations, the function call `process` is optimal.
+- when is is modulated, invoke `processModulated`. In this case, the filter updates will occur at a fixed interval `N` frames, to limit the facility of updates. It's a latency-performance compromise. `N` is defined as `kFilterControlInterval` in the file `SfzFilterDefs.h`.
+
+## Relation of controls to SFZ opcodes
+
+- `cutoff`: it's the opcode `filN_cutoff` (Hz)
+- `q`: it's the opcode `filN_resonance` (dB)
+- `pksh`: it's the opcode `filN_gain` (dB)
