@@ -95,3 +95,17 @@ Q = vslider("[02] Resonance [unit:dB]", 0.0, 0.0, 40.0, 0.1) : ba.db2linear;
 
 Our filter corresponding to each type has a naming convention starting with "sfz".
 As an example, the 2-pole lowpass is the function `sfzLpf2p`. It is 1-in, 1-out.
+
+## Generation
+
+When filter functions are implemented, we generate all with a script since there exist a high quantity of them.
+
+See `scripts/generate_filters.sh`.
+
+The output is a file of `.cxx` extension for each. It's a special extension because it's not listed in CMake sources, rather all filters are included by a single implementation file. It permits also to inline them into their caller.
+
+The following faust options are used which are notable:
+- `-pn`: sets the name of the function to generate from `sfz_filters.dsp`, in this case the name of our filter function as noted in the convention above
+- `-cn`: sets the class name of generated C++
+- `-double`: indicates to perform internal computations in double precision, which is found to be necessary for numeric stability
+- `-inpl`: allow to process the buffers in place; from what I can tell, it doesn't have performance impact.
