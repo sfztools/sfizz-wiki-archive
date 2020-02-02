@@ -37,10 +37,10 @@ The transfer function of the generic biquad is:
 
 `H(z) = (b0 + b1*z^-1 + b2 * z^-2) / (a0 + a1 * z^-1 + a2 * z^-2)`
 
-From this formula, the response is computed by substituting `z` for `exp(2*pi*fc/fs)`.
+From this formula, the response is computed by substituting `z` for `exp(2*pi*j*fc/fs)`.
 The polar form of the result are the filter's amplitude and phase response.
 
-When H(z) is substituted with `Y(z)/X(z)`, and then this identity applied to pass from z-domain to time domain:
+When H(z) is substituted with `Y(z) / X(z)`, and then this identity applied to pass from z-domain to time domain:
 `(A*z^-N)` → `(A*x[n-N])`
 
 It's the implementable Direct Form I equation:
