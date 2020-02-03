@@ -49,7 +49,7 @@ It's the implementable Direct Form I equation:
 
 Then, `a0` is factored into the equation to save an instruction in the computation:
 
-`y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2] - (a1/a0)*x[n-1] - (a2/a0)*x[n-2]`
+`y[n] = (b0/a0)*x[n] + (b1/a0)*x[n-1] + (b2/a0)*x[n-2] - (a1/a0)*y[n-1] - (a2/a0)*y[n-2]`
 
 It's the normalized form which is needed to use this filter in faust function `fi.iir`.
 
