@@ -4,3 +4,7 @@ Welcome to the sfizz wiki!
 
 - [[Filters]]
 - [[OBS builds]]
+
+### Other
+
+- [[Ideas for longer term]]
