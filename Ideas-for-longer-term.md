@@ -11,6 +11,8 @@
 - Signal flow arrangements
   (cf. `dsp_order`)
 
+- Effects per region
+
 ## Routing
 
 - Flexible routing : allow regions to be routed to separate sends
