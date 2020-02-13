@@ -23,3 +23,7 @@
   Consider some ideas from CamelAudio Alchemy.
   - edit several properties of an item with indenting syntax
   - load data from CSV files
+
+## Intruments
+
+- Import other existing sample libraries
