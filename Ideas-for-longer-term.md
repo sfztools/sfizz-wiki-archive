@@ -16,3 +16,10 @@
 ## Routing
 
 - Flexible routing : allow regions to be routed to separate sends
+
+## Expressivity
+
+- Metalanguage to write SFZ more easily, with less repetition.
+  Consider some ideas from CamelAudio Alchemy.
+  - edit several properties of an item with indenting syntax
+  - load data from CSV files
