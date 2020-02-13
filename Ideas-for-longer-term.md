@@ -9,6 +9,8 @@
 - Random walk LFO
   - see https://www.muffwiggler.com/forum/viewtopic.php?t=10563
 
+- Virtual analog filters with non-linearities
+
 ## Effects
 
 - Standard effect set
