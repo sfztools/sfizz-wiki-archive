@@ -4,6 +4,8 @@
 
 - Oscillator mode with FM
 
+- Arpeggiator
+
 ## Effects
 
 - Standard effect set
