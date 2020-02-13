@@ -6,6 +6,9 @@
 
 - Arpeggiator
 
+- Random walk LFO
+  - see https://www.muffwiggler.com/forum/viewtopic.php?t=10563
+
 ## Effects
 
 - Standard effect set
