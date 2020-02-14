@@ -2,14 +2,20 @@
 
 ## Synthesis
 
-- Oscillator mode with FM
+- Oscillator mode with FM (Additive) & AM (Subtractive)
 
 - Arpeggiator
 
 - Random walk LFO
   - see https://www.muffwiggler.com/forum/viewtopic.php?t=10563
 
+- LFO sync to host tempo
+
 - Virtual analog filters with non-linearities
+
+- 2D Wavetable
+
+- Granular
 
 ## Effects
 
@@ -34,3 +40,8 @@
 ## Intruments
 
 - Import other existing sample libraries
+
+## MIDI Standards
+
+- MPE
+- MIDI 2.0
