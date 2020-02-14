@@ -2,7 +2,7 @@
 
 ## Synthesis
 
-- Oscillator mode with FM (Additive) & AM (Subtractive)
+- Oscillator mode with FM & AM
 
 - Arpeggiator
 
