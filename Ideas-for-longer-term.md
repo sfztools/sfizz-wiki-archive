@@ -17,6 +17,8 @@
 
 - Granular
 
+- Physical modelling
+
 ## Effects
 
 - Standard effect set
