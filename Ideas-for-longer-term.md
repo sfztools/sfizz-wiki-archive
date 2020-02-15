@@ -19,6 +19,9 @@
 
 - Physical modelling
 
+- Scala tuning support (Able to load Scala file & set root note of scale)
+  - see http://www.huygens-fokker.org/scala/
+
 ## Effects
 
 - Standard effect set
