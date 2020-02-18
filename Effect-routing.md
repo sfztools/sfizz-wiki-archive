@@ -32,5 +32,4 @@ reverb_wet=50
 |            | Set to `fx2`  |             |                |              |              | Effect is not heard |
 |            | Set to `fx2`  | Set opcode to `fx2tomain` |                |              |              | Effect is not heard |
 | Set opcode to `effect2` | Set to `fx2`  | Set opcode to `fx2tomain` |                |              |              | Effect is heard (high volume) |
-
 |            |       |             | Any value |              |              | Does not change anything |
