@@ -36,6 +36,10 @@ reverb_wet=50
 |            |       |             | Any value | Does not change anything |
 |            |       | Set opcode to `fx1tomix` |                | Effect is heard (high volume) |
 
+**Note:** the all-omitted case is listed as *moderate volume*, the explicit case is *high volume*.  
+It's because the latter mixes in another path of the dry signal (see next table below).
+This other path is neutralized when setting `directtomain=0`.  
+
 - With `reverb_dry` to **0**
 
 | `effect1`  | `bus` | `fx1tomain` | `reverb_input` | *Other* | *Result*        |
