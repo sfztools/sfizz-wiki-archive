@@ -35,3 +35,10 @@ reverb_wet=50
 | Set opcode to `effect2` | Set to `fx2`  | Set opcode to `fx2tomain` |                | Effect is heard (high volume) |
 |            |       |             | Any value | Does not change anything |
 |            |       | Set opcode to `fx1tomix` |                | Effect is heard (high volume) |
+
+- With `reverb_dry` to **0**
+
+| `effect1`  | `bus` | `fx1tomain` | `reverb_input` | *Result*        |
+| ---------- | ----- | ----------- | -------------- | --------------- |
+|            |       |             |                | Hear a mix of reverb sound and dry sound |
+| Omit       | Omit  | Omit        |                | Hear the reverb sound only |
