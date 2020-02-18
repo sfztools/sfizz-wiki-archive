@@ -38,7 +38,8 @@ reverb_wet=50
 
 - With `reverb_dry` to **0**
 
-| `effect1`  | `bus` | `fx1tomain` | `reverb_input` | *Result*        |
-| ---------- | ----- | ----------- | -------------- | --------------- |
-|            |       |             |                | Hear a mix of reverb sound and dry sound |
-| Omit       | Omit  | Omit        |                | Hear the reverb sound only |
+| `effect1`  | `bus` | `fx1tomain` | `reverb_input` | *Other* | *Result*        |
+| ---------- | ----- | ----------- | -------------- | ------- | --------------- |
+|            |       |             |                |         | Hear a mix of reverb sound and dry sound |
+| Omit       | Omit  | Omit        |                |         | Hear the reverb sound only |
+|            |       |             |                | add `directtomain=0` in `<effect>` | Hear the reverb sound only |
