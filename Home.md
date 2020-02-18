@@ -5,6 +5,10 @@ Welcome to the sfizz wiki!
 - [[Filters]]
 - [[OBS builds]]
 
+### Analysis
+
+- [[Effect routing]]
+
 ### Other
 
 - [[Ideas for longer term]]
