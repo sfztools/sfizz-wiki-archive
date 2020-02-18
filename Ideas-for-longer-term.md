@@ -1,5 +1,3 @@
-# Ideas for longer term
-
 ## Synthesis
 
 - Oscillator mode with FM & AM
