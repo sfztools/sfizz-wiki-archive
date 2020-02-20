@@ -1,5 +1,7 @@
 Welcome to the sfizz wiki!
 
+- [[Release Notes]]
+
 ### Developer notes
 
 - [[Filters]]
