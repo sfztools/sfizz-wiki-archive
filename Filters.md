@@ -64,6 +64,9 @@ We select this filter for our implementation, because it matches near perfectly 
 It's available in faust in `maxmsp.lib`.
 Only in late or developer versions, this library was relicensed permissively, so instead it's copied in our source tree with the appropriate license mention. (as `rbj.lib`)
 
+Relevant discussions and PR:
+- https://github.com/sfztools/sfizz/issues/30
+
 ## Implementation
 
 The implementation of the filters is subject to following prerequisites:
@@ -124,6 +127,18 @@ Handling this problem, there is one special consideration to consider:
 - if smoothing is applied to parameters Fc and Q, they will be varying at a-rate, and also the filter computation will also become a-rate, regardless that Fc and Q controls are k-rate, killing efficiency.
 - the solution is to apply smoothing to the individual coefficients `bN` and `aN`; since biquads are normalized, hence eliminates coefficient `a0`, there is generally need for 5 smooth filters (`b0`, `b1`, `b2`, `a1`, `a2`).
 In some RBJ filter types, there are some coefficients which are constant or equal to another, in this case faust will be able to eliminate and simplify as needed, so it needs less smooth filters than general case.
+
+Note that in Faust, the smoothing starts from for all parameters and as such it can cause a strange transient effect at the beginning of the filter.
+To handle this in the least hacky way, there is a boolean value in the Faust filters that deactivate the smoothing.
+The idea is to deactivate the smoothing, process a single empty sample with the proper parameter values, and then reactivate the smoothing.
+The parameters are now set to their initial values and processing can continue with the original smoothing function.
+In the wrapper, the `prepare` function call does this.
+
+Technically, the smoothing is a 1-pole IIR filter with a time constant `tau` set at 1ms. 
+
+Relevant discussions and PR:
+- https://github.com/sfztools/sfizz/pull/70
+- https://github.com/sfztools/sfizz/pull/64
 
 ## Filter wrapper
 
