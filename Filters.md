@@ -110,6 +110,10 @@ The following faust options are used which are notable:
 - `-double`: indicates to perform internal computations in double precision, which is found to be necessary for numeric stability
 - `-inpl`: allow to process the buffers in place; from what I can tell, it doesn't have performance impact.
 
+If you want to use a `faust` Docker image, you have to update the scripts to replace the line that calls `faust $FAUSTARGS ...` with `docker run -v $PWD:/faust faust:latest $FAUSTARGS ...`.
+
+On 2020-02-20, the version of `faust` used was `2.20.2` -- alot of 2 and 0 but it's not on purpose...
+
 ## Smoothing
 
 When the filter is modulated, we need a form of smoothing to apply, such that a modulation never applies a too brutal change which produces a discontinuity, destabilizing the filter.
