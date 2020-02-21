@@ -10,6 +10,7 @@ Welcome to the sfizz wiki!
 ### Analysis
 
 - [[Effect routing]]
+- [[Effects]]
 
 ### Other
 
