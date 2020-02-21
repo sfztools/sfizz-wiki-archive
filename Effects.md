@@ -25,3 +25,8 @@ hpf1p(f) = fi.iir((0.5*(1.+p),-0.5*(1+p)),(0.-p)) with {
 /* Test */
 process = os.osci(110.0/oversampling) : *(0.15) : bitred <: (_, _);
 ```
+
+Figure: reference effect 99% on 110Hz sine wave (green), implementation with hiir oversampling 2x (red).
+The tiny peak between steps suggests a use of transition function (like polyBLEP)
+
+![Bitred reference vs Oversampling 2x](https://user-images.githubusercontent.com/17614485/75026113-aea67f80-549c-11ea-9262-b9570ad45430.png)
