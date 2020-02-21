@@ -15,7 +15,7 @@
 - The file now reload automatically on file change, and you can force a reload if necessary (#17)
 - Corrected a bug where memory would be read past the end of the file in memory, generating artifacts.
 - Corrected a bug where the real-time queue handling background loading of the voices would fail spuriously.
-- Corrected a bug where in the LV2 plugin the opcode list was truncated (#18)
+- Corrected a bug where in the LV2 plugin the unknown opcode list was truncated (#18)
 - Added dynamic updates for the current modifiers (panning, stereo image, volume and amplitude mainly) (#19)
 - Added timing for callbacks and file loading times.
 - The JACK client will warn you instead of crashing if you do not give it a file to load (#27)
