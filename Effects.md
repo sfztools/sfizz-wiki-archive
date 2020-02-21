@@ -30,3 +30,34 @@ Figure: reference effect 99% on 110Hz sine wave (green), implementation with hii
 The tiny peak between steps suggests a use of transition function (like polyBLEP)
 
 ![Bitred reference vs Oversampling 2x](https://user-images.githubusercontent.com/17614485/75026113-aea67f80-549c-11ea-9262-b9570ad45430.png)
+
+## Decimation
+
+Matched by exponential fit on the target sampling frequency, in 0-100 range.
+
+Same remarks apply as for `bitred` regarding polyBLEP, it's the same.
+
+```
+import("stdfaust.lib");
+
+amount = hslider("Amount", 99, 0, 100, 1);
+
+decim(x) = y : hpf1p(20.0) letrec {
+  'y = ba.if(p+(f/ma.SR)>1.0, x, y);
+  'p = wrap(p+(f/ma.SR)); // the position 0-1
+}
+with {
+  // exponential curve fit
+  a=5.729950e+04; b=-6.776081e-02; c=180;
+  f=a*exp(amount*b)+c;
+};
+
+hpf1p(f) = fi.iir((0.5*(1.+p),-0.5*(1+p)),(0.-p)) with {
+  p = exp(-2.*ma.PI*f/ma.SR);
+};
+
+wrap(x) = x-int(x);
+
+/* Test */
+process = os.osci(110.0) : *(0.15) : decim <: (_, _);
+```
