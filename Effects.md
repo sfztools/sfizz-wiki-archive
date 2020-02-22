@@ -2,7 +2,7 @@
 
 This is the automatic panner.
 
-Not exactly like the reference, more info in comments. (depth control, pan function)
+Not exactly like the reference, more info in comments. (the depth control)
 
 ```
 /**
@@ -20,7 +20,7 @@ Not exactly like the reference, more info in comments. (depth control, pan funct
 
    Note:
      Reference uses a linear pan function.
-     Below, linear is commented, logarithmic was used instead.
+     Below, logarithmic is provided but it's commented.
  */
 
 import("stdfaust.lib");
@@ -44,12 +44,12 @@ with {
   phase2 = wrap(phase1+o);
 
   // ordinary stereo pan function (+3dB)
-  panL(x) = cos(x*(ma.PI/2.0))*sqrt(2.0);
-  panR(x) = sin(x*(ma.PI/2.0))*sqrt(2.0);
+  //panL(x) = cos(x*(ma.PI/2.0))*sqrt(2.0);
+  //panR(x) = sin(x*(ma.PI/2.0))*sqrt(2.0);
 
   // linear stereo pan function
-  // panL(x) = 2.*(1.-x);
-  // panR(x) = 2.*(x);
+  panL(x) = 2.*(1.-x);
+  panR(x) = 2.*(x);
 
   triangle(p) = 1.-abs(2.*p-1.);
   wrap(x) = x-int(x);
