@@ -125,3 +125,60 @@ wrap(x) = x-int(x);
 /* Test */
 process = os.osci(110.0) : *(0.15) : decim <: (_, _);
 ```
+
+## Phaser
+
+Not complete, only frequency range was analyzed.
+Filter has not been matched, feedback not yet analyzed.
+See notes in comments.
+
+```
+/*
+Dual-notch Phaser, with linear cutoff control by LFO
+
+Note:
+  `phaser_stages`: number of stages. Cascade this function as many times as
+                   needed to produce the effect.
+  `phaser_waveform`: wave number (same as LFO)
+  `phaser_freq`: frequency of LFO which modulates the notches
+  `phaser_depth`: manipulates the 2 ranges of cutoff for the notches
+  `phaser_feedback`: TODO, implemented in model below but not measured
+  `phaser_phase[_oncc]`: TODO, assumed to be the phase 0-1 of LFO?
+*/
+
+import("stdfaust.lib");
+
+phaser = (+:notch1:notch2) ~ *(feedback) with {
+  depth = hslider("[1] Depth [unit:%]", 50, 0, 100, 1);
+  lfoFreq = hslider("[2] LFO frequency [unit:Hz]", 1.0, 0.0, 10.0, 0.01);
+
+  feedback = 0.0; // TODO determine `phaser_feedback` in the domain 0-100
+
+  lfo = os.lf_triangle(lfoFreq); // set any LFO waveform `phaser_waveform`
+
+  cutoffDepth1 = 31*depth;
+  cutoffMax1 = 3100.0;
+  cutoffCenter1 = 1600.0;
+
+  cutoffDepth2 = 155*depth;
+  cutoffMax2 = 13400.0;
+  cutoffCenter2 = 8300.0;
+
+  //widthAdjust = hslider("[3] Width adjust", 0.5, 0.1, 10.0, 0.01);
+  widthAdjust = 0.5; // arbitrary pick, not checked
+
+  notchWidth1 = widthAdjust*cutoffDepth1;
+  notchWidth2 = widthAdjust*cutoffDepth2;
+
+  notchFreq1 = max(0,min(cutoffMax1,cutoffCenter1+lfo*cutoffDepth1));
+  notchFreq2 = max(0,min(cutoffMax2,cutoffCenter2+lfo*cutoffDepth2));
+
+  // filter pick arbitrary, could use also 1-pole allpass
+  notch1 = fi.notchw(notchWidth1, notchFreq1);
+  notch2 = fi.notchw(notchWidth2, notchFreq2);
+};
+
+/* Test */
+process = no.noise : *(0.15) : phaser;
+// process = phaser, phaser;
+```
