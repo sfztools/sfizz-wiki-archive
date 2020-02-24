@@ -22,3 +22,8 @@ Explicitly-indexed curves after implicitly-indexed ones seem to be discarded by 
 ## Interpolation
 
 Both software are using linear interpolation to evaluate between the defined values. (verified)
+
+## Bounds
+
+- In ARIA, the curve values are not bounded.
+- In Cakewalk, the curve values are clamped in the domain [-1:+1].
