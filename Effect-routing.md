@@ -1,3 +1,60 @@
+## Bus chaining
+
+When multiple effects are in a bus, they are chained according to their order of appearance in SFZ.
+
+Example: chained effects in bus
+```
+<region>
+sample=sinewave.wav
+oscillator=on
+lokey=0
+hikey=127
+effect1=100
+
+<effect>
+//
+directtomain=0
+fx1tomain=100
+//
+bus=fx1
+type=lofi
+decim=100
+decim_dry=0
+decim_wet=100
+
+<effect>
+bus=fx1
+type=fverb
+reverb_type=hall
+reverb_size=20
+reverb_tone=90
+reverb_dry=0
+reverb_wet=100
+```
+
+Example: chained effects in default chain
+```
+<region>
+sample=sinewave.wav
+oscillator=on
+lokey=0
+hikey=127
+
+<effect>
+type=lofi
+decim=100
+decim_dry=0
+decim_wet=100
+
+<effect>
+type=fverb
+reverb_type=hall
+reverb_size=20
+reverb_tone=90
+reverb_dry=0
+reverb_wet=100
+```
+
 ## Analysis 1: RXP single
 
 Synth: RXP
