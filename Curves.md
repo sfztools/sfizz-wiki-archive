@@ -18,3 +18,7 @@ ARIA opcode `curve_index` permits to specify the explicit index.
 It can't seem to mix curves which are explicitly indexed and those which aren't.
 
 Explicitly-indexed curves after implicitly-indexed ones seem to be discarded by the loader, and vice-versa.
+
+## Interpolation
+
+Both software are using linear interpolation to evaluate between the defined values. (verified)
