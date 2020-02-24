@@ -1,3 +1,30 @@
+## Curve formula
+
+1. bipolar, from -1 to 1 (useful for things such as tuning and panning, used by CC10 panning by default)
+2. linear inverted, from 1 to 0
+3. bipolar inverted, from 1 to -1
+
+Trivial implementation.
+
+4. concave (used for CC7 volume tracking and amp_veltrack)
+
+TODO
+
+5. Xfin power curve
+
+Crossfading formula.
+It's like a typical pan formula for the right channel.
+
+ARIA's exact formula is `pow(x, 0.5)` with `x=(CCval/127)`
+
+Another candidate will be `sin(0.5*pi*x)`, for the pan formula already existing in Sfizz.
+
+6. Xfout power curve
+
+It's the opposite of Xfin power curve.
+
+`pow(1-x, 0.5)`
+
 ## Curve numbers
 
 When a `<curve>` element without an explicit `curve_index` is met, it takes the next available index starting from 1.
