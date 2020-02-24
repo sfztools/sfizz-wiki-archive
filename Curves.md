@@ -8,14 +8,14 @@ Trivial implementation.
 
 4. concave (used for CC7 volume tracking and amp_veltrack)
 
-TODO
+`f(x)=x*x` with `x=(CCval/127)`
 
 5. Xfin power curve
 
 Crossfading formula.
 It's like a typical pan formula for the right channel.
 
-ARIA's exact formula is `pow(x, 0.5)` with `x=(CCval/127)`
+ARIA's exact formula is `f(x)=pow(x, 0.5)` with `x=(CCval/127)`
 
 Another candidate will be `sin(0.5*pi*x)`, for the pan formula already existing in Sfizz.
 
@@ -23,7 +23,7 @@ Another candidate will be `sin(0.5*pi*x)`, for the pan formula already existing 
 
 It's the opposite of Xfin power curve.
 
-`pow(1-x, 0.5)`
+`f(x)=pow(1-x, 0.5)`
 
 ## Curve numbers
 
