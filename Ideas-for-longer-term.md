@@ -17,7 +17,7 @@
 
 - Physical modelling (waveguide opcodes)
 
-- Scala tuning support (Able to load Scala file & set root note of scale)
+- Scala tuning support (load Scala file, set root note of scale & Hertz value)
   - see http://www.huygens-fokker.org/scala/scl_format.html
 
 ## Effects
