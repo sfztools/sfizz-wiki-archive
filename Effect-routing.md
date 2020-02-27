@@ -57,9 +57,9 @@ reverb_wet=100
 
 ## Volumes (RXP)
 
-`effect1`: range 0%-100%, gain linear
-`fx1tomain`: range 0%-100%, gain linear
-`apan_dry`: range 0.0-1.0, gain linear
+- `effect1`: range 0%-100%, gain linear
+- `fx1tomain`: range 0%-100%, gain linear
+- `apan_dry`: range 0.0-1.0, gain linear
 
 ## Analysis 1: RXP single
 
