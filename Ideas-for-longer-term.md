@@ -21,6 +21,10 @@
   - see http://www.huygens-fokker.org/scala/scl_format.html
   - default: (Equal Temperament, C, A4_MIDI_note_69=440hz) 
 
+## Sampling
+
+- Global memory storage, allow multiple Sfizz instances to use same sample memory
+
 ## Effects
 
 - Standard effect set
