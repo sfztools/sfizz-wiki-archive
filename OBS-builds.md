@@ -10,13 +10,13 @@ There are package builds by distribution which are organized as follows:
 
 - RPM-style distribution: build steps in `sfizz.spec`
 - Deb-style distribution: build steps in `debian.rules`, metadata in other files `debian.*` and `sfizz.dsc`
-- Arch-style distribution: build steps in PKGBUILD
+- Arch-style distribution: build steps in `PKGBUILD`
 
 This organization is mostly explained in the OBS user manual.
 
 Depend on the target distribution, the package is splitted into multiple subpackages.
-- RPM: sfizz, libsfizz0, libsfizz0-devel
-- DEB: sfizz, libsfizz0, libsfizz0-dev
+- RPM: `sfizz`, `libsfizz0`, `libsfizz0-devel`
+- DEB: `sfizz`, `libsfizz0`, `libsfizz0-dev`
 
 The `sfizz` package contains the LV2 and JACK programs. They are statically linked, so they do not have a dependency to `libsfizz0`.
 
@@ -30,12 +30,12 @@ The OBS packages contain a `_service` file at the root.
 The goal of this file is to tell the builder to perform a series of operations before starting to build.
 The purpose can be to download the remote source archive, or to set the version of the package which is built.
 
-- `tar_scm`: This clones the git repo and packs the result into a tarball, which makes it a source file of the build.
+- [tar_scm](https://github.com/openSUSE/obs-service-tar_scm/blob/master/tar_scm.service.in): This clones the git repo and packs the result into a tarball, which makes it a source file of the build.
    (this service is marked obsolete, but some target platforms don't allow the newer, so it's kept back on purpose)
-- `recompress`: Applies compression on the created tarball to turn it into `tar.gz` or other
-- `set_version`: Sets version in the package build files. The version number can be explicit, otherwise it can be created based on the git revision.
-- `download_url`: Download a source file based on URL, and keep it in cache.
-- `verify_file`: Apply a check based on hash to the downloaded file.
+- [recompress](https://github.com/openSUSE/obs-service-recompress/blob/master/recompress.service): Applies compression on the created tarball to turn it into `tar.gz` or other
+- [set_version](https://github.com/openSUSE/open-build-service/blob/master/src/api/test/fixtures/backend/services/set_version.service): Sets version in the package build files. The version number can be explicit, otherwise it can be created based on the git revision.
+- [download_url](https://github.com/openSUSE/open-build-service/blob/master/src/api/test/fixtures/backend/services/download_url.service): Download a source file based on URL, and keep it in cache.
+- [verify_file](https://github.com/hiberis/obs-service-verify_file/blob/master/verify_file.service): Apply a check based on hash to the downloaded file.
 
 ### Updating the develop channel
 
