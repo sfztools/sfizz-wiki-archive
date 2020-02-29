@@ -23,7 +23,7 @@
 
 ## Sampling
 
-- Global memory storage, allow multiple Sfizz instances to use same sample memory
+- Global memory storage, allow multiple Sfizz instances to use same file pool
 
 ## Effects
 
