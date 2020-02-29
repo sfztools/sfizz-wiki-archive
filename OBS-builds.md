@@ -37,6 +37,9 @@ The purpose can be to download the remote source archive, or to set the version 
 - [download_url](https://github.com/openSUSE/open-build-service/blob/master/src/api/test/fixtures/backend/services/download_url.service): Download a source file based on URL, and keep it in cache.
 - [verify_file](https://github.com/hiberis/obs-service-verify_file/blob/master/verify_file.service): Apply a check based on hash to the downloaded file.
 
+Note: when committing, I can be required to install some OBS services on the local machine.
+At least on Arch, they are available in AUR as packages `obs-service-*`.
+
 ### Updating the develop channel
 
 The develop channel is triggered by a Github webhook on push. It's fully automatic, and does not need update.
