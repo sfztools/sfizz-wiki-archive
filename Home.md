@@ -12,6 +12,7 @@ Welcome to the sfizz wiki!
 - [[Effect routing]]
 - [[Effects]]
 - [[Curves]]
+- [[EQ]]
 
 ### Other
 
