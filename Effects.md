@@ -1,3 +1,12 @@
+## Reverb
+
+- `reverb_tone` 0-100 is the cutoff of a low pass filter
+
+The cutoff is analyzed by playing a sound in 2 instances, one with reverb_tone=100 and varying the tone of the other.
+Compute Y(z)/X(z) of the two spectrums and identify the -3dB point of the magnitude.
+
+The result is approximately `21+(0.01*reverb_tone)*108` expressed in midi pitch units.
+
 ## Automatic pannner
 
 This is the automatic panner.
