@@ -12,7 +12,7 @@ Welcome to the sfizz wiki!
 - [[Effect routing]]
 - [[Effects]]
 - [[Curves]]
-- [[EQ]]
+- [[EQ and filters]]
 
 ### Other
 
