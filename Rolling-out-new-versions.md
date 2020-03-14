@@ -13,12 +13,12 @@ git merge master
 3. Merge develop in master
 ```bash
 git checkout master
-git merge --no-ff develop
+git merge develop
 git tag -a x.y.z
 ```
 4. Push and let CI run
 5. In case of deployment problems, correct things that need to be. If there are new changes, remerge master in develop
 ```bash
 git checkout develop
-git merge --no-ff master
+git merge master
 ```
