@@ -10,13 +10,15 @@ git merge master
     - The CMake version numbers in `./CMakeLists.txt`
     - The LV2 version number in `./cmake/LV2Config.cmake` if there was changes to the LV2 ports and addition/removal of options that affect the ABI of the plugin (not the library!)
     - The VST version number if there was changes to the internal VST state format
-3. Merge develop in master
+3. Merge develop in master and tag; use the version number as a tag message
 ```bash
 git checkout master
 git merge develop
 git tag -a x.y.z
+git push origin master
+git push origin x.y.z
 ```
-4. Push and let CI run
+4. Let CI run
 5. In case of deployment problems, correct things that need to be. If there are new changes, remerge master in develop
 ```bash
 git checkout develop
