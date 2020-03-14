@@ -6,6 +6,7 @@ Welcome to the sfizz wiki!
 
 - [[Filters]]
 - [[OBS builds]]
+- [[Rolling out new versions]]
 
 ### Analysis
 
