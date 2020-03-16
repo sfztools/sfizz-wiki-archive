@@ -19,7 +19,10 @@
 
 - Scala tuning support (load Scala file, set root note of scale & mapped A4=Hertz value)
   - see http://www.huygens-fokker.org/scala/scl_format.html
-  - default: (Equal Temperament, C, A4_MIDI_note_69=440hz) 
+  - default: (Equal Temperament, C, A4_MIDI_note_69=440hz)
+
+- Analogue tuning of regions, (not Analogue modelling)
+  - possibly `tune=analogue`? Or additional opcode.
 
 ## Sample Playback
 
