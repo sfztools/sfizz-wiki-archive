@@ -14,7 +14,7 @@
 - 2D Wavetable
 
 - Wavetable oscillator from formula
-  - eg: `sample="sin(2 * pi * x)"
+  - eg: `sample="sin(2 * pi * x)" *Serum: sin(pi * -x)*
   - see: https://s3.amazonaws.com/decembercymatics/Serum_Manual.pdf (chapter 15: Formula Parser)
   - discussion of Serum parser: https://www.kvraudio.com/forum/viewtopic.php?t=425973
   - MIT parser library: http://www.partow.net/programming/exprtk/index.html
