@@ -13,6 +13,11 @@
 
 - 2D Wavetable
 
+- Wavetable oscillator from formula
+  - eg: `sample="sin(2 * pi * x)"
+  - see: https://s3.amazonaws.com/decembercymatics/Serum_Manual.pdf (chapter 15: Formula Parser)
+  - possibly more powerful parser: http://www.partow.net/programming/exprtk/index.html (MIT)
+
 - Granular
 
 - Physical modelling (waveguide opcodes)
