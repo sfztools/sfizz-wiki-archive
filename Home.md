@@ -7,6 +7,7 @@ Welcome to the sfizz wiki!
 - [[Filters]]
 - [[OBS builds]]
 - [[Rolling out new versions]]
+- [[To deprecate on next API ABI break]]
 
 ### Analysis
 
