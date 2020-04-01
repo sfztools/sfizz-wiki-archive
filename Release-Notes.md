@@ -1,3 +1,30 @@
+### 0.3.2
+
+- sfizz now builds down to gcc-4.9 with stricter C++11 compliance. The main release builds use C++17 mode on newer compilers (#111, #110)
+- Upstream libraries updates (abseil, filesystem and atomic_queue) (#121)
+- Added an experimental support for `make uninstall` (#118, #120)
+- Add the autopan (#105), width, rectifier, gain, limiter (#131), and string resonator (#143)
+- Curves are now registered within the synth but cannot be referenced yet (#96)
+- The VST plugin got recreated needlessly in some hosts (#122)
+- Added a "panic button" API that kills voices (#122)
+- Corrected a potential overflow for CC names
+- Added support for more generators using wavetables (#61)
+- Added support for the `oscillator` opcode, to create generators from files (#128)
+- Generators using wavetables are now correctly tuned (#126)
+- The stereo panning stage of the process was corrected; width is now set to 100% by default as it should, and panning is properly applied (1faa7f0739d0f0c4c020cd0d6c96efe2fb655fba, b551716b088b00a3caa05ffe630766f097ea40ec)
+- The logging API can be used to set a log filename
+- Corrected errors in the performance report script related to display values (file names and histogram range)
+- Reworked the parser; the new one is more efficient, and can indicate error/warning ranges (#130)
+- The VST plugin now reloads the file automatically, like the LV2 plugin (#139)
+- The max number of CCs was increased to 512, to accomodate some libraries that use cc300 modifiers.
+- The engine uses floating point values internally for midi events (#137); this prepares it for high-resolution midi down the line.
+- Fixes some realtime synchronization issues in the VST (#140)
+- Added support for `note_polyphony`, `polyphony`, and `note_selfmask` (#142)
+- Added support for `pitch_cc` and `tune_cc` modifiers (#142)
+- The modifier support was overhauled; all regions can now have multiple CCs modifying the same target (#142).
+- Corrected bugs and differences with Cakewalk/ARIA in the ADSR envelope (#136)
+- Improved performance of the amplitude stage gain of the rendering process (#145)
+
 ### 0.3.1
 
 - Added a VST3 plug-in front-end to the library. It is still quite experimental and suffers from problems that stem from the VST3 SDK itself. (#99)
