@@ -22,7 +22,7 @@
 - Added support for `note_polyphony`, `polyphony`, and `note_selfmask` (#142)
 - Added support for `pitch_cc` and `tune_cc` modifiers (#142)
 - The modifier support was overhauled; all regions can now have multiple CCs modifying the same target (#142).
-- Corrected bugs and differences with Cakewalk/ARIA in the ADSR envelope (#136)
+- Corrected bugs and differences with Cakewalk/ARIA in the ADSR envelope (#136, #129)
 - Improved performance of the amplitude stage gain of the rendering process (#145)
 
 ### 0.3.1
