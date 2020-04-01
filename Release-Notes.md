@@ -5,14 +5,14 @@
 - Added an experimental support for `make uninstall` (#118, #120)
 - Add the autopan (#105), width, rectifier, gain, limiter (#131), and string resonator (#143)
 - Curves are now registered within the synth but cannot be referenced yet (#96)
-- The VST plugin got recreated needlessly in some hosts (#122)
+- Corrected a bug where the VST plugin got recreated needlessly in some hosts (#122)
 - Added a "panic button" API that kills voices (#122)
-- Corrected a potential overflow for CC names
+- Corrected a potential overflow for CC names (930bfdf)
 - Added support for more generators using wavetables (#61)
 - Added support for the `oscillator` opcode, to create generators from files (#128)
 - Generators using wavetables are now correctly tuned (#126)
-- The stereo panning stage of the process was corrected; width is now set to 100% by default as it should, and panning is properly applied (1faa7f0739d0f0c4c020cd0d6c96efe2fb655fba, b551716b088b00a3caa05ffe630766f097ea40ec)
-- The logging API can be used to set a log filename
+- The stereo panning stage of the process was corrected; width is now set to 100% by default as it should, and panning is properly applied (1faa7f, b55171)
+- The logging API can be used to set a log filename (a6cbb48)
 - Corrected errors in the performance report script related to display values (file names and histogram range)
 - Reworked the parser; the new one is more efficient, and can indicate error/warning ranges (#130)
 - The VST plugin now reloads the file automatically, like the LV2 plugin (#139)
