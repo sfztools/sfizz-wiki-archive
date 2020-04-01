@@ -11,7 +11,7 @@
 - Added support for more generators using wavetables (#61)
 - Added support for the `oscillator` opcode, to create generators from files (#128)
 - Generators using wavetables are now correctly tuned (#126)
-- The stereo panning stage of the process was corrected; width is now set to 100% by default as it should, and panning is properly applied (1faa7f, b55171)
+- The stereo panning stage of the process was corrected; width is now set to 100% by default as it should, and panning is properly applied (1faa7f, b55171, #133)
 - The logging API can be used to set a log filename (a6cbb48)
 - Corrected errors in the performance report script related to display values (file names and histogram range)
 - Reworked the parser; the new one is more efficient, and can indicate error/warning ranges (#130)
