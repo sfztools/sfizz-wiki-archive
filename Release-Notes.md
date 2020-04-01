@@ -3,7 +3,7 @@
 - sfizz now builds down to gcc-4.9 with stricter C++11 compliance. The main release builds use C++17 mode on newer compilers (#111, #110)
 - Upstream libraries updates (abseil, filesystem and atomic_queue) (#121)
 - Added an experimental support for `make uninstall` (#118, #120)
-- Add the autopan (#105), width, rectifier, gain, limiter (#131), and string resonator (#143)
+- Add the autopan (#105), width, rectifier, gain, limiter (#131), and string resonator (#143) effects
 - Curves are now registered within the synth but cannot be referenced yet (#96)
 - Corrected a bug where the VST plugin got recreated needlessly in some hosts (#122)
 - Added a "panic button" API that kills voices (#122)
