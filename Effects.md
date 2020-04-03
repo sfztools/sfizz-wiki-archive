@@ -1,6 +1,9 @@
 ## Disto
 
+Rough approximation
 `cutoff = 440*2**((disto_tone*1.45-69)/12)`
+
+Consider using the same formula as reverb below.
 
 ## Reverb
 
