@@ -1,3 +1,7 @@
+## Disto
+
+`cutoff = 440*2**((disto_tone*1.45-69)/12)`
+
 ## Reverb
 
 - `reverb_tone` 0-100 is the cutoff of a low pass filter
