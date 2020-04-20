@@ -63,3 +63,8 @@
 
 - MPE
 - MIDI 2.0
+
+## Community
+
+- Sfizz Cloud integration
+  - similar to Blender Cloud membership, allow download of sample sets and tutorials
