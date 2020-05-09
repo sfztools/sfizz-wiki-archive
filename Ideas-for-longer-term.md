@@ -35,6 +35,14 @@
 
 - Global memory storage, allow multiple Sfizz instances to use same file pool
 
+- Slice sample playback, from audio file with markers, useful for beat slicing, or concatenated sample libs. eg:
+
+```
+<region>
+sample=mysample.wav
+slice=1
+```
+
 ## Effects
 
 - Standard effect set
