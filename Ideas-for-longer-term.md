@@ -43,7 +43,7 @@ sample=mysample.wav
 slice=1
 ```
 
-- Allow sfizz to load samples into RAM, instead of streaming, possibly `hint=ram`
+- Allow sfizz to load samples into RAM, instead of streaming, possibly `hint_ram` or as per Sforzando ARIA.
 
 ## Effects
 
