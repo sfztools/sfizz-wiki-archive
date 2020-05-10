@@ -44,8 +44,9 @@ slice=1
 ```
 - Possibly allow custom map for samples without markers?`slice_map=sampleslices.csv`
 
-
 - Allow sfizz to load samples into RAM, instead of streaming, possibly `hint_ram` or as per Sforzando ARIA.
+
+- Load multi-channel samples, and allow selecting stereo/mono channel per region
 
 ## Effects
 
@@ -59,6 +60,8 @@ slice=1
 ## Routing
 
 - Flexible routing : allow regions to be routed to separate sends
+
+- Multi-channel output
 
 ## Expressivity
 
