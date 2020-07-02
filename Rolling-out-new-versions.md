@@ -18,10 +18,10 @@ git tag -a x.y.z
 git push origin master
 git push origin x.y.z
 ```
-4. Update and commit the next release version on develop (see 2)
-5. Let CI run
-6. In case of deployment problems, correct things that need to be. If there are new changes, remerge master in develop
+4. Let CI run
+5. In case of deployment problems, correct things that need to be. If there are new changes, remerge master in develop
 ```bash
 git checkout develop
 git merge master
 ```
+6. Update and commit the next release version on develop (see 2)
