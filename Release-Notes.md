@@ -12,7 +12,7 @@ Other new features:
 - Added support for `direction=reverse` (#185 #179)
 - Added support to label the keys using a `label_key` opcode. This is not really standard yet, but it is now integrated in the LV2 plugin to advertise the names in the MIDNAM file and possibly change their labels in hosts that support it. (#174 #154)
 - Added support for block comments `/* */` in the parser (#196 #195)
-- Added a `sfizz_render` client in tree; you can build it with the make target `sfizz_render` if the `SFIZZ_CLIENTS` CMake variable is set to `ON`. (#200 #201 #206)
+- Added a `sfizz_render` client in tree; you can build it with the make target `sfizz_render` if the `SFIZZ_RENDER` CMake variable is set to `ON`. (#200 #201 #206)
 - Add support to integrate sfizz in DPF plugins (#216)
 - Added an AudioUnit target (#224)
 - Added support for the `set_hdcc` opcodes and overall added the ability to support floating-point CCs from the API (#233 #232 #244)
