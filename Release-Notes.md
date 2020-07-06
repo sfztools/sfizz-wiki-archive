@@ -1,9 +1,13 @@
 ### 0.4.0
 
-New features:
+Big stuff:
+- Added support for polynomial resamples and `sample_quality` opcodes (#238 #267). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality. Added support for better resampling algorithms also in the wavetables (#287).
+- Support `_curvecc` and `_stepcc` opcodes (#166 #155 #77) as well as `_smoothcc` opcodes (#181 #48 #22 #153 #297 #285)
+- Added support and API for Scala tuning files in the engine and the plugins (#253 #268 #282)
+
+Other new features:
 - Added support for unison oscillators (#161)
 - Support for the `polyphony` opcode at all levels (#171 #275), as well as `note_polyphony`. The `group=` polyphony is also more flexible and can be defined anywhere.
-- Added support for `_curvecc` and `_stepcc` opcodes (#166 #155 #77)
 - Added support for `offset_cc` (#170 #159)
 - Added support for `direction=reverse` (#185 #179)
 - Added support to label the keys using a `label_key` opcode. This is not really standard yet, but it is now integrated in the LV2 plugin to advertise the names in the MIDNAM file and possibly change their labels in hosts that support it. (#174 #154)
@@ -13,11 +17,7 @@ New features:
 - Added an AudioUnit target (#224)
 - Added support for the `set_hdcc` opcodes and overall added the ability to support floating-point CCs from the API (#233 #232 #244)
 - Added support for FLAC loops (#242 #229)
-- Added support and API for Scala tuning files in the engine and the plugins (#253 #268 #282)
-- Added support for polynomial resamples and `sample_quality` opcodes (#238 #267). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality.
-- Added support for better resampling algorithms also in the wavetables (#287)
 - Support the `mapPath` feature of the LV2 specifications, for tentatively better portability in plugin states (#303)
-- Support `_smoothcc` opcodes (#181 #48 #22 #153 #297 #285)
 - New instances of the sfizz LV2 plugin will now load a default `*sine` instrument (#283)
 
 Issues:
