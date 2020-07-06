@@ -2,7 +2,7 @@
 
 New features:
 - Added support for unison oscillators (#161)
-- Support for the `polyphony` opcode at all levels (#171), as well as `note_polyphony`. The `group=` polyphony is also more flexible and can be defined anywhere (#.
+- Support for the `polyphony` opcode at all levels (#171 #275), as well as `note_polyphony`. The `group=` polyphony is also more flexible and can be defined anywhere (#.
 - Added support for `_curvecc` and `_stepcc` opcodes (#166 #155 #77)
 - Added support for `offset_cc` (#170 #159)
 - Added support for `direction=reverse` (#185 #179)
@@ -13,8 +13,12 @@ New features:
 - Added an AudioUnit target (#224)
 - Added support for the `set_hdcc` opcodes and overall added the ability to support floating-point CCs from the API (#233 #232 #244)
 - Added support for FLAC loops (#242 #229)
-- Added support and API for Scala tuning files in the engine and the plugins (#253)
-- Added support for polynomial resamples and `sample_quality` opcodes (#238). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality.
+- Added support and API for Scala tuning files in the engine and the plugins (#253 #268 #282)
+- Added support for polynomial resamples and `sample_quality` opcodes (#238 #267). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality.
+- Added support for better resampling algorithms also in the wavetables (#287)
+- Support the `mapPath` feature of the LV2 specifications, for tentatively better portability in plugin states (#303)
+- Support `_smoothcc` opcodes (#181 #48 #22 #153 #297 #285)
+- New instances of the sfizz LV2 plugin will now load a default `*sine` instrument (#283)
 
 Issues:
 - Solved some issues with DSmolken's drumkits related to the ampeg envelope (#172)
@@ -32,7 +36,13 @@ Issues:
 - Change the default build type to `RelWithDebInfo` (#249)
 - Improve the note stealing algorithm (#214); note that this is still very much a work in progress since many heuristics are in play here. Feel free to report misbehavior regarding note stealing as we improve this regularly.
 - Corrected a bug with SFZ v1 `velcurve` (#263)
+- Properly support the `off_by=-1` opcode to correctly reset the value. (#235)
+- Corrected some errors with null-terminated atoms in the LV2 plugin (#269)
 - Ignore garbage values following e.g. a key number in opcode values (as in `key=64Garbage` -> `key=64`) (#263)
+- `ampeg_****_onccXX` modifiers now properly consider multiple CC modifiers (#300 #167) 
+- Add headers and group sources in the CMake project for integration with e.g. Qt (#312)
+- Trigger on CC does not require disabling the key triggering through e.g. `key=-1` (#315)
+- Support flat notes parsed as string values (#291 #289)
 - Various other plumbing changes
  
 API additions:
@@ -41,6 +51,7 @@ API additions:
 - Added an API call to load an sfz file as an `std::string` or `const char*` (#217)
 - Added API calls for Scala files and tunings (#253)
 - Added high-definition floating point CC API calls (#244)
+- Added API calls to change the default resampling quality (#267 #238)
 
 ### 0.3.2
 
