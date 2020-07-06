@@ -2,7 +2,7 @@
 
 New features:
 - Added support for unison oscillators (#161)
-- Support for the `polyphony` opcode at all levels (#171 #275), as well as `note_polyphony`. The `group=` polyphony is also more flexible and can be defined anywhere (#.
+- Support for the `polyphony` opcode at all levels (#171 #275), as well as `note_polyphony`. The `group=` polyphony is also more flexible and can be defined anywhere.
 - Added support for `_curvecc` and `_stepcc` opcodes (#166 #155 #77)
 - Added support for `offset_cc` (#170 #159)
 - Added support for `direction=reverse` (#185 #179)
