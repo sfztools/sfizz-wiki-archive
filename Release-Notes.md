@@ -31,7 +31,7 @@ Issues:
 - Solved an issue with super short files (#215)
 - Corrected a stack smashing bug in the LV2 plugin (#226)
 - Fixed some parsing issues with `$variables` (#230)
-- Properly adversatise the VST plugin parameters (#241)
+- Properly advertise the VST plugin parameters (#241)
 - Process `$` expansions in `#include` (#247)
 - Change the default build type to `RelWithDebInfo` (#249)
 - Improve the note stealing algorithm (#214); note that this is still very much a work in progress since many heuristics are in play here. Feel free to report misbehavior regarding note stealing as we improve this regularly.
