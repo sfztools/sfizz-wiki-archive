@@ -12,9 +12,9 @@ New features:
 - Add support to integrate sfizz in DPF plugins (#216)
 - Added an AudioUnit target (#224)
 - Added support for the `set_hdcc` opcodes and overall added the ability to support floating-point CCs from the API (#233 #232 #244)
-- Add support for FLAC loops (#242 #229)
-- Add support and API for Scala tuning files in the engine and the plugins (#253)
-- 
+- Added support for FLAC loops (#242 #229)
+- Added support and API for Scala tuning files in the engine and the plugins (#253)
+- Added support for polynomial resamples and `sample_quality` opcodes (#238). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality.
 
 Issues:
 - Solved some issues with DSmolken's drumkits related to the ampeg envelope (#172)
