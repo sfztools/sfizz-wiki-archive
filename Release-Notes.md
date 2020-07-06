@@ -1,3 +1,47 @@
+### 0.4.0
+
+New features:
+- Added support for unison oscillators (#161)
+- Support for the `polyphony` opcode at all levels (#171), as well as `note_polyphony`. The `group=` polyphony is also more flexible and can be defined anywhere (#.
+- Added support for `_curvecc` and `_stepcc` opcodes (#166 #155 #77)
+- Added support for `offset_cc` (#170 #159)
+- Added support for `direction=reverse` (#185 #179)
+- Added support to label the keys using a `label_key` opcode. This is not really standard yet, but it is now integrated in the LV2 plugin to advertise the names in the MIDNAM file and possibly change their labels in hosts that support it. (#174 #154)
+- Added support for block comments `/* */` in the parser (#196 #195)
+- Added a `sfizz_render` client in tree; you can build it with the make target `sfizz_render` if the `SFIZZ_CLIENTS` CMake variable is set to `ON`. (#200 #201 #206)
+- Add support to integrate sfizz in DPF plugins (#216)
+- Added an AudioUnit target (#224)
+- Added support for the `set_hdcc` opcodes and overall added the ability to support floating-point CCs from the API (#233 #232 #244)
+- Add support for FLAC loops (#242 #229)
+- Add support and API for Scala tuning files in the engine and the plugins (#253)
+- 
+
+Issues:
+- Solved some issues with DSmolken's drumkits related to the ampeg envelope (#172)
+- An exception problem was thrown if an sfz file was deleted (#182 #184)
+- Properly bundle the `dylib` for macOS (#188)
+- Improved the filter stability (#198 #199 #210)
+- Handle `USE_LIBCPP` properly on configure (#203)
+- Fix the handling of loop markers if sample `end=` is present (#202 #204)
+- Handle note on with 0 velocity as note offs in the jack client (#208 #211)
+- Solved an issue with super short files (#215)
+- Corrected a stack smashing bug in the LV2 plugin (#226)
+- Fixed some parsing issues with `$variables` (#230)
+- Properly adversatise the VST plugin parameters (#241)
+- Process `$` expansions in `#include` (#247)
+- Change the default build type to `RelWithDebInfo` (#249)
+- Improve the note stealing algorithm (#214); note that this is still very much a work in progress since many heuristics are in play here. Feel free to report misbehavior regarding note stealing as we improve this regularly.
+- Corrected a bug with SFZ v1 `velcurve` (#263)
+- Ignore garbage values following e.g. a key number in opcode values (as in `key=64Garbage` -> `key=64`) (#263)
+- Various other plumbing changes
+ 
+API additions:
+- Added API calls to set `$variable` define values prior to loading an SFZ file (#168 #119 #130)
+- Added API calls to get key labels and cc labels defined by `label_key` and `label_cc` (#174)
+- Added an API call to load an sfz file as an `std::string` or `const char*` (#217)
+- Added API calls for Scala files and tunings (#253)
+- Added high-definition floating point CC API calls (#244)
+
 ### 0.3.2
 
 - sfizz now builds down to gcc-4.9 with stricter C++11 compliance. The main release builds use C++17 mode on newer compilers (#111, #110)
