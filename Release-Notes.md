@@ -43,6 +43,7 @@ Issues:
 - Add headers and group sources in the CMake project for integration with e.g. Qt (#312)
 - Trigger on CC does not require disabling the key triggering through e.g. `key=-1` (#315)
 - Support flat notes parsed as string values (#291 #289)
+- Improved handling of `release_key` (#298); still not perfect, if the region spans multiple key and multiple notes happened with the pedal down, only a single voice will start.
 - Various other plumbing changes
  
 API additions:
