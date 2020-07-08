@@ -1,7 +1,7 @@
 ### 0.4.0
 
 Big stuff:
-- Added support for polynomial resamples and `sample_quality` opcodes (#238 #267). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality. Added support for better resampling algorithms also in the wavetables (#287).
+- Added support for polynomial resamples and `sample_quality` opcodes (#238 #267). The engine now defaults to a value of `2` for this opcode, which is more intensive than the original linear interpolation resampler but provides a better quality. Added support for better resampling algorithms also in the wavetables via `oscillator_quality` (#287).
 - Support `_curvecc` and `_stepcc` opcodes (#166 #155 #77) as well as `_smoothcc` opcodes (#181 #48 #22 #153 #297 #285)
 - Added support and API for Scala tuning files in the engine and the plugins (#253 #268 #282)
 
