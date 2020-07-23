@@ -44,6 +44,8 @@ Issues:
 - Trigger on CC does not require disabling the key triggering through e.g. `key=-1` (#315)
 - Support flat notes parsed as string values (#291 #289)
 - Improved handling of `release_key` (#298); still not perfect, if the region spans multiple key and multiple notes happened with the pedal down, only a single voice will start.
+- Properly read the LV2 option list until the end (#323, by @atsushieno)
+- Corrected a parsing issue when `$variables` were part of an opcode name (#328)
 - Various other plumbing changes
  
 API additions:
