@@ -9,6 +9,8 @@
 
 - LFO sync to host tempo
 
+- LFO header for free running global LFOs
+
 - Virtual analog filters with non-linearities
 
 - 2D Wavetable
