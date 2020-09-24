@@ -1,6 +1,6 @@
 ## Synthesis
 
-- [ ] Oscillator mode with FM & AM
+- [x] Oscillator mode with FM & Ringmod
 
 - [ ] Arpeggiator
 
