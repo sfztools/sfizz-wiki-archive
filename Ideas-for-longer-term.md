@@ -2,15 +2,6 @@
 
 - [x] Oscillator mode with FM & Ringmod
 
-- [ ] Arpeggiator
-
-- [ ] Random walk LFO
-  - see https://www.muffwiggler.com/forum/viewtopic.php?t=10563
-
-- [ ] LFO sync to host tempo
-
-- [ ] LFO header for free running global LFOs
-
 - [ ] Virtual analog filters with non-linearities
 
 - [ ] 2D Wavetable
@@ -32,6 +23,17 @@
 
 - [ ] Analogue tuning of regions, (not Analogue modelling)
   - possibly `tune=analogue`? Or additional opcode.
+
+## Modulation
+
+- [ ] Arpeggiator
+
+- [ ] Random walk LFO
+  - see https://www.muffwiggler.com/forum/viewtopic.php?t=10563
+
+- [ ] LFO sync to host tempo
+
+- [ ] LFO header for free running global LFOs
 
 ## Sample Playback
 
