@@ -23,6 +23,7 @@ New features:
 - CC 7, 10 and 11 are now linked by default to pan, volume and expression (#475)
 - Support `hint_ram_loading` for loading the whole samples in RAM (#353)
 - Support for `loop_crossfade` (#464)
+- All phase-related opcodes in sfizz now use the 0->1 convention, as does ARIA/Sforzando, instead of the 0->360 convention (#499)
 
 Issues:
 - Loading probable wavetable files, or wav files containing wavetable metadata now sets `oscillator=on` on the region (#431)
@@ -30,6 +31,8 @@ Issues:
 - Fix an unwanted copy in the realtime thread (#334)
 - Improve the filter shortcut path (#336)
 - Fix the default `ampeg_attack` and `ampeg_release` to avoid clicks (#437)
+- Corrected a race condition in freewheeling mode (#500)
+- Fixed a potential non-realtime operation in the realtime thread (#498)
 - Fix a bug when using a larger internal oversampling for regions with an `offset` value (#469)
 - Fix an issue when loops occured more than once in a block (#462)
 - Increase the range of the clamping on amplitude (#468) and pitch (#474)
