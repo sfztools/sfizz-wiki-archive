@@ -4,7 +4,8 @@ Big stuff:
 - Added basic support for Flex EGs (#388) as modulation sources (targets to come)
 - Added basic support for LFOs (#338)  as modulation sources (targets to come)
 - EGs and LFOs can now target EQs and filters (#424)
-- A new GUI has been added and is common to the LV2 and VST plugin (#397 #404 #419 #489 #492 #495 #496 #497); still mostly work in progress, more to come !
+- A new GUI has been added and is common to the LV2 and VST plugin (#397 #404 #419 #489 #492 #495 #496 #497); still mostly work in progress, more to come!
+- Provided build systems to use sfizz with the VCV-Rack SDK and the DISTRHO Plugin Framework
 
 New features:
 - Added support for `sustain_lo` (#327)
