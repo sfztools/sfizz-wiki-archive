@@ -1,3 +1,13 @@
+### 0.5.1
+
+- Corrected race conditions that appeared with the new thread and file pools (#507 #508 #514 #521)
+- Take the internal oversampling factor into account for loop points (#506)
+- Fix an implementation error for the internal hash function when applied on a single byte (#512)
+- Knobs are linear in the AU plugin (#517)
+- Fix a crash in VSTGUI (#520)
+- Fix the resource path in the LV2 plugin under windows (#524)
+- Add MacOS make install rules (#525)
+
 ### 0.5.0
 
 Big stuff:
