@@ -15,3 +15,6 @@ A window must be applied to the windowed sinc, in order to squash the edges.
 A Kaiser window is most appropriate, which permits to keep aliasing ripples under a determined amplitude threshold. It has a parameter `Beta`, permitting to establish a compromise: the higher `Beta`, the lower is the alias magnitude, but the selectivity of the "brick wall" filter worsens near the cutoff point.
 
 At first it seems an alright choice of `Beta` may be from about 6 to 10, as table size increases from 8 to 72.
+
+
+[Tool](https://gist.github.com/jpcima/f446ae9862965ee77b5ffa8e80882c21) for plotting frequency responses of sinc interpolators dynamically, when size and `Beta` are varied, based on the `deip.pdf` paper.
