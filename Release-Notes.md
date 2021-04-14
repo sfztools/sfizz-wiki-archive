@@ -6,8 +6,8 @@ Headlines:
 - It is now possible to build sfizz without relying on libsndfile, using a set of libraries. This is now the
   default build mode. Building with libsndfile can be enabled at configure time.
 - The library and plugins can now load DecentSampler files, and could accomodate other formats.
-- CCs and keyswitch/active key ranges are now displayed in the editor for all plugins. There has been a lot
-  of UI work to make it more practical to use.
+- CCs, keyswitch range, key ranges and active keyswitch are now displayed in the editor for all plugins. 
+  There has been a lot of UI work to make it more practical to use.
 - There is an OSC interface in the library, which allows to have introspection into the currently
   loaded file, the state of CCs/keyswitches, and also set some parameters for loaded regions.
 
