@@ -18,6 +18,11 @@ API/ABI changes for the library:
 being. The API and plugin parameters are staying for compatibility. A more robust implementation should come soon.
 - Added documentation in the API calls to make clear that sample-accurate triggering of voice requires
   messages to be sent in order. The VST plugin in particular did not respect this and has been updated.
+- A new `bpmTempo` method has been added to pass tempo as beats-per-minute rather than seconds per beat.
+  The previous version is deprecated.
+- There are new HD (float) versions of API calls for note and CC events.
+- `aftertouch` is renamed as `channel_aftertouch` (for C) and `channelAftertouch` (for C++) throughout the API
+  to be more consistent with `polyAftertouch`.
 
 UI:
 - Fix an error where sample indices could wrap for massive pitch modulations (#825 #751)
@@ -48,6 +53,8 @@ Plugins:
 - Update VST to 3.7.2 (#798)
 
 Library:
+- Small files with only zeroes are considered as `*silence` (#831)
+- The library uses an Hermite interpolation by default (#828 #829)
 - Add high-definition versions of the API calls (#820)
 - Corrected a bug where regions with long release envelopes would not stop on sample ending (#811)
 - Support polyphonic aftertouch events, triggers and targets (#809 #764)
