@@ -5,6 +5,7 @@ The process is as follows:
     - The CMake version numbers in `./CMakeLists.txt`
     - The LV2 version number in `./cmake/LV2Config.cmake` if there was changes to the LV2 ports and addition/removal of options that affect the ABI of the plugin (not the library!)
     - The VST version number if there was changes to the internal VST state format
+    - Check for missing or wrong `@since` version numbers in Doxygen comments
 2. Merge develop in master and tag; use the version number as a tag message
 ```bash
 git checkout master
