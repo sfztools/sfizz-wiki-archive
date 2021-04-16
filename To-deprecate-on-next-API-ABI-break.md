@@ -1,2 +1,1 @@
-- the `sfizz_enable_logging(sfizz_t*)` and `Sfizz::enableLogging()` "overloads" should be removed from the facing API, as well as the `Synth` and `Logger` API to only keep a (possibly empty) string/string_view parameter for the log filename. The C API could assume an empty filename if the `const char* prefix` parameter is `nullptr`. The `setPrefix` functions could be removed everywhere.
-- `sfizz_send_aftertouch` should become `sfizz_send_channel_pressure`, see [#7](https://github.com/sfztools/sfizz/issues/7)
+Nothing for now.
