@@ -20,3 +20,4 @@ Welcome to the sfizz wiki!
 ### Other
 
 - [[Ideas for longer term]]
+- [[UI themes]]
