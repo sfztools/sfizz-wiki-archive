@@ -1,4 +1,27 @@
-### 1.0.0-rc1
+### 1.1.0
+
+- Added support for `amp_veltrack_oncc`, `pitch_veltrack_oncc`, and `fil_veltrack_oncc` (#938)
+- Dynamic EGs are supported for both flex and normal EGs (#933)
+- The engine now parses `oscillator=auto` and only enables oscillators on short samples with wavetable tags in the WAV metadata (#954)
+- The DecentSampler importer now better translates the loop modes (#981)
+- Even when plugin-side automation is disabled (through `SFIZZ_LV2_PSA`), sustain and sostenu CC events will still go through to the plugin to improve the user experience on hosts that do not support automatic mapping of control ports to midi events through the LV2 `midi:binding` extension (#963).
+- Fixed a bug that could hang the background thread in the VST plugin (#984)
+- The current keyswitch is properly saved and restored with the plugin state (#961)
+- It is now possible to enter values for CCs on the plugin GUI by double clicking on the CC knob (#945). A high-resolution input option is also available on a right click.
+- Added a text interface to `sfizz_jack` (#973)
+- CC-triggered voices can be cut off by polyphony groups (#972)
+- Allow building on MacOS 10.9 (#990)
+- Improved the X11 runloop (#986)
+- Added a polyphony option to `sfizz_render` (#992)
+- Corrected a bug which prevented VST3 or LV2 plugins to be loaded by the Ardour DAW (#995)
+- Corrected a bug where octave and note offset were not reset upon loading a new file (#994)
+- Support `_curvecc` for extended CCs (#993)
+- Support `lorand` and `hirand` on CC-triggered regions (#997)
+- Corrected a bug where CC-triggered voices could generate note-offs when cut by a polyphony group (#998)
+- Added man pages for `sfizz_render` and `sfizz_jack` (#999)
+- Various build system improvements for different platforms (#957 #958 #964 #967 #968 #989
+978
+### 1.0.0
 
 Headlines:
 - SFZ v1 is virtually supported except for a handful of opcodes ! Please check
