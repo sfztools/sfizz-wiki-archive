@@ -38,7 +38,7 @@ Bug fixes and other improvements:
 - Corrected a bug where octave and note offset were not reset upon loading a new file (#994)
 - Corrected a bug where CC-triggered voices could generate note-offs when cut by a polyphony group (#998)
 - Added man pages for `sfizz_render` and `sfizz_jack` (#999)
-- Various build system improvements for different platforms (#957 #958 #964 #967 #968 #989 #978 #942 #921 #920 #902 #849 #850 #856)
+- Various build system improvements for different platforms (#957 #958 #964 #967 #968 #989 #978 #942 #921 #920 #902 #849 #850 #856 #1001)
 
 ### 1.0.0
 
