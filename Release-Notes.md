@@ -1,3 +1,6 @@
+### 1.1.1
+- Roll back VSTGUI to 4.10.2 to avoid corruption of the UI in some scenarios
+
 ### 1.1.0
 
 New supports and plugins:
