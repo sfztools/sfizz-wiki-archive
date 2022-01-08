@@ -6,6 +6,7 @@ The big stuff:
 - sfizz can now parse embedded samples in base64 data (#1041)
 
 Smaller things:
+- Added support in the plugin GUI/parameters for the "sustain cancels release" behavior of LinuxSampler.
 - The internal midi state is not reset when loading/reloading. This means in particular that controls changed on an instrument will be kept if you edit the underlying SFZ file (#1002)
 - Updated dependent libraries (#1018)
 - Support extended CCs 140 and 141 for "keydelta" (#1003)
@@ -29,6 +30,7 @@ Smaller things:
 API changes:
 - `sfizz_enable_logging` and `sfizz_disable_logging` (and their C++ counterparts) are deprecated, replaced by `sfizz_get_callback_breakdown` which needs to be called at the end of a callback by the host (#1034). All file writing is handled by the host for logging.
 - Added `sfizz_send_program_change` and its C++ counterpart.
+- Added `sfizz_set_sustain_cancels_release` and its C++ counterpart.
 
 ### 1.1.1
 - Roll back VSTGUI to 4.10.2 to avoid corruption of the UI in some scenarios
