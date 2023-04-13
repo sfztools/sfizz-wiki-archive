@@ -1,7 +1,3 @@
-## [[Home]]
-
-- [[Release Notes]]
-
 ## Developer notes
 
 - [[Filters]]
