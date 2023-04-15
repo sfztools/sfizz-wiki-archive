@@ -21,3 +21,7 @@ git checkout develop
 git merge master
 ```
 5. Update and commit the next release version on develop (see 2)
+6. Once tag/release is made, increment the library version to distinguish this new stable/release with future development builds.
+
+from [LV2 documentation](http://lv2plug.in/ns/lv2core#microVersion):
+> if a change is made in the development version in source control, the micro version MUST be incremented (to an odd number) to distinguish this modified version from the previous release.
