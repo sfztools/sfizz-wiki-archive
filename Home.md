@@ -1,6 +1,6 @@
 Welcome to the sfizz wiki!
 
-### Developer notes
+## Developer notes
 
 - [[Filters]]
 - [[Resampling]]
@@ -8,14 +8,14 @@ Welcome to the sfizz wiki!
 - [[Rolling-out-new-versions]]
 - [[To-deprecate-on-next-API-ABI-break]]
 
-### Analysis
+## Analysis
 
 - [[Effect-routing]]
 - [[Effects]]
 - [[Curves]]
 - [[EQ-and-filters]]
 
-### Other
+## Other
 
 - [[Ideas-for-longer-term]]
 - [[UI-themes]]
