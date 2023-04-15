@@ -4,18 +4,18 @@ Welcome to the sfizz wiki!
 
 - [[Filters]]
 - [[Resampling]]
-- [[OBS builds]]
-- [[Rolling out new versions]]
-- [[To deprecate on next API ABI break]]
+- [[OBS-builds]]
+- [[Rolling-out-new-versions]]
+- [[To-deprecate-on-next-API-ABI-break]]
 
 ### Analysis
 
-- [[Effect routing]]
+- [[Effect-routing]]
 - [[Effects]]
 - [[Curves]]
-- [[EQ and filters]]
+- [[EQ-and-filters]]
 
 ### Other
 
-- [[Ideas for longer term]]
-- [[UI themes]]
+- [[Ideas-for-longer-term]]
+- [[UI-themes]]
